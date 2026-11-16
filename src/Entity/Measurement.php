@@ -18,7 +18,7 @@ class Measurement
     #[ORM\JoinColumn(nullable: false)]
     private ?Location $location = null;
 
-    #[ORM\Column(type: Types::DATE_MUTABLE)]
+    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTime $date = null;
 
     #[ORM\Column(type: Types::DECIMAL, precision: 5, scale: 2)]

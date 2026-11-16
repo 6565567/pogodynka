@@ -25,7 +25,7 @@ final class MeasurementController extends AbstractController
         ]);
     }
 
-    #[Route('/new', name: 'app_location_new', methods: ['GET', 'POST'])]
+    #[Route('/new', name: 'app_measurement_new', methods: ['GET', 'POST'])]
     #[IsGranted('ROLE_MEASUREMENT_NEW')]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
