@@ -36,6 +36,11 @@ class Measurement
     #[ORM\Column(type: Types::DECIMAL, precision: 5, scale: 2)]
     private ?string $precipitation = null;
 
+    public function getFahrenheit(): float
+    {
+        return ($this->getTemperature() * 9 / 5) + 32;
+    }
+
     public function getId(): ?int
     {
         return $this->id;

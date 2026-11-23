@@ -1,0 +1,5 @@
+city,country,date,celsius,fahrenheit,humidity,cloudCover,airPressure,precipitation
+{{ "\r\n" }}{%- for m in measurements %}
+{{- city -}},{{- country -}},{{- m.date|date('Y-m-d') -}},{{- m.temperature -}},{{- m.fahrenheit -}},{{- m.humidity -}},{{- m.cloudCover -}},{{- m.airPressure -}},{{- m.precipitation -}}
+{%- if not loop.last %}{{ "\r\n" }}{% endif -%}
+{%- endfor %}
